@@ -8,7 +8,7 @@
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding-top: 60px; 
+            padding-top: 60px;
             background-color: #1a1a1a;
             color: #f4f4f4;
             display: flex;
@@ -40,7 +40,7 @@
         .toolbar a:hover {
             color: #fa5555;
         }
-        
+
         .main-content {
             flex-grow: 1;
             display: flex;
@@ -51,28 +51,37 @@
             text-align: center;
         }
 
+        h1 {
+            margin-bottom: 5px;
+        }
+
         .main-button {
             display: inline-block;
-            margin: 40px auto;
+            margin: 15px auto;
             padding: 20px 40px;
             font-size: 1.5em;
             font-weight: bold;
             text-decoration: none;
             color: white;
-            background-color: #fa5555; /* itch.io style */
             border: none;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(250, 85, 85, 0.4);
-            transition: background-color 0.3s, transform 0.1s;
+            transition: opacity 0.3s, transform 0.1s;
         }
 
         .main-button:hover {
-            background-color: #e84545;
+            opacity: 0.9;
             transform: translateY(-2px);
         }
 
-        .main-button:active {
-            transform: translateY(0);
+        .itch-button {
+            background-color: #fa5555;
+            box-shadow: 0 4px 15px rgba(250, 85, 85, 0.4);
+        }
+
+        .engine-button {
+            background: linear-gradient(145deg, #7adfff, #4ac4e8);
+            box-shadow: 0 4px 15px rgba(74, 196, 232, 0.4);
+            color: #1a1a1a;
         }
     </style>
 </head>
@@ -87,11 +96,15 @@
     </div>
 
     <div class="main-content">
-        <h1>Welcome to Team Portable</h1>
-        <p>just another indie development group.</p>
-        
-        <a href="https://itch.io/profile/teamportable" class="main-button" target="_blank">
+        <h1>Team Portable</h1>
+        <p>Just another indie development group.</p>
+
+        <a href="https://itch.io/profile/teamportable" class="main-button itch-button" target="_blank">
             Our itch.io Games
+        </a>
+        
+        <a href="https://teamportable.github.io/Quantum-Engine/" class="main-button engine-button">
+            Quantum Engine Project
         </a>
         
     </div>
